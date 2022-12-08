@@ -1,35 +1,35 @@
 const assert = require('assert');
-const input = require('./index.js').name;
+const markedName = require('./index.js').name;
 
 describe("greet function", () => {
-  it("should take several situations into account, greeting Eliza, Marcus, throwing an error if name is empty, and plural greetings", () => {
+  it("should greet in an appropriate fashion", () => {
     // arrange
     const greeter = require('./index.js');
     
     // act
     const actualResult = greeter.greet('Marcus');
     //eliza
-    const ElizaResult = greeter.greet('Eliza');
+    const elizaResult = greeter.greet('Eliza');
     //empty
-    const EmptyResult = greeter.greet(' ');
+    const emptyResult = greeter.greet('');
     //group 
-    const GroupResult = greeter.greet('Marcus and Eliza');
+    const groupResult = greeter.greet('Marcus and Eliza');
+
     // assert
     
-
-    switch(input) {
+    switch(markedName) {
     case 'Marcus':
       assert.equal('Welcome to SALT, Marcus', actualResult);
       break;
     case 'Eliza':
-      assert.equal('Welcome to SALT, Eliza', ElizaResult);
+      assert.equal('Welcome to SALT, Eliza', elizaResult);
       break;
-    case ' ':
-      assert.equal('Welcome to SALT,  ', EmptyResult);
+    case '':
+      assert.equal('Welcome to SALT, ', emptyResult);
       console.log("Hey, that's empty!");
       break;
     case'Marcus and Eliza':
-      assert.equal('Welcome to SALT, Marcus and Eliza', GroupResult);
+      assert.equal('Welcome to SALT, Marcus and Eliza', groupResult);
       break;
     default:
       console.log('Nothing tested for written');
