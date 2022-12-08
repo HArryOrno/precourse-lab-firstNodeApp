@@ -1,5 +1,5 @@
 const prompt = require('prompt-sync')();
-
+type = module;
 function greet(namePassedIn) {
   return 'Welcome to SALT, '+name;
 }
@@ -24,10 +24,11 @@ var dayDiff = dayDate - dd;
 var timeDiff = Math.ceil((yearDiff*365) + (monthDiff*30.437)+ dayDiff);
 */
 
-export const name = prompt('What is your name? ');
+const name = prompt('What is your name? ');
 const greeting = greet(name);
 console.log(greeting);
 /*
 console.log('The course starts in ' + timeDiff + ' days.');*/
 
 module.exports.greet = greet;
+module.exports.name = name;
