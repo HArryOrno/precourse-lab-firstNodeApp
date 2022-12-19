@@ -8,7 +8,7 @@ function greet(namePassedIn) {
 
 // Main program
 
-/*var today = new Date();
+var today = new Date();
 
 var dd = today.getDate();
 var mm = today.getMonth(); //January is 0!
@@ -22,13 +22,13 @@ var yearDiff = yearDate - yyyy;
 var monthDiff = monthDate - mm;
 var dayDiff = dayDate - dd;
 var timeDiff = Math.ceil((yearDiff*365) + (monthDiff*30.437)+ dayDiff);
-*/
+
 
 const name = prompt('What is your name? ');
 const greeting = greet(name);
 console.log(greeting);
-/*
-console.log('The course starts in ' + timeDiff + ' days.');*/
+
+console.log('The course starts in ' + timeDiff + ' days.');
 
 module.exports.greet = greet;
 module.exports.name = name;
